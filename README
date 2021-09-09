@@ -1,0 +1,20 @@
+1. do udft calculation
+	python2.7 hs.py
+	output: hs_bp86.chk
+
+2. do localization
+	python2.7 nlocal.py >& nlocal.out &
+        input:  hs_bp86.chk
+        output: hs_bp86.h5, molden files
+        required python scripts: ulocal.py, pmloc.py
+
+3. check localized mo
+	jmol test.spt
+	input:  hs_bp86_lmo.molden
+	output: figures
+
+4. define CAS (PM localization of MO & sort by <i|n|i>)
+	python2.7 nlocal.py >& nlocal.out &
+	input:  hs_bp86.chk, hs_bp86.h
+	output: hs_bp86_new.h5 (referred as lmo.h5)
+	cp hs_bp86_new.h5 lmo.h5

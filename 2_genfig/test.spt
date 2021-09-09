@@ -1,0 +1,82 @@
+initialize;
+#width 1000;
+#height 800;
+set background [xffffff];
+set frank off
+set autoBond true;
+set bondRadiusMilliAngstroms 30;
+set bondTolerance 0.5;
+set forceAutoBond false;
+#cd /home/sunqm/workspace/dmet/data/gho-test/surface
+cd /home/slee89/project/det_sampling/FCIDUMP_iron_sulfur_cluster/2FeIII_2FeII/2_local/2_genfig 
+load hs_bp86_lmo.molden;
+wireframe 0.1;spacefill 0.1;
+#spacefill 0.2;
+#translate y 10;
+
+center {0.0,0.0,0.0};
+rotate z -27.1; 
+rotate y  84.4; 
+rotate z 125.9;
+
+#isoSurface ID "Rbath1" MO 1 fill noMesh noDots;
+#isoSurface ID "Rbath2" MO 2 fill noMesh noDots;
+#isoSurface ID "Xbath1" MO 3 fill noMesh noDots;
+#isoSurface ID "Xbath2" MO 4 fill noMesh noDots;
+#color $Rbath1 translucent 0.6 [xffff00];
+#color $Rbath2 translucent 0.6 [x00ff00];
+#color $Xbath1 translucent 0.6;# [x4444ff];
+#color $Xbath2 translucent 0.6;# [xff44ff];
+#isoSurface ID "homo2" MO 5 fill noMesh noDots;
+#color $homo2 translucent 0.6 [x00ff00];
+
+#isoSurface MO 1 fill noMesh noDots;
+#color isoSurface translucent 0.7;
+#write JPG 100 "rbath1a.jpg"
+#isoSurface MO 2 fill noMesh noDots;
+#color isoSurface translucent 0.7;
+#write JPG 100 "rbath2a.jpg"
+
+MO COLOR [xff0020] [x0060ff];
+MO COLOR translucent 0.3;
+MO fill noDots noMesh;
+## remove the top-left corner list Energy = ... Occupancy = ...
+MO titleformat ""
+MO cutoff 0.07;
+isosurface resolution 5 MO 109;write IMAGE 2400 1600 JPG 100 "fes109.jpg";
+isosurface resolution 5 MO 110;write IMAGE 2400 1600 JPG 100 "fes110.jpg";
+isosurface resolution 5 MO 111;write IMAGE 2400 1600 JPG 100 "fes111.jpg";
+isosurface resolution 5 MO 112;write IMAGE 2400 1600 JPG 100 "fes112.jpg";
+isosurface resolution 5 MO 113;write IMAGE 2400 1600 JPG 100 "fes113.jpg";
+isosurface resolution 5 MO 114;write IMAGE 2400 1600 JPG 100 "fes114.jpg";
+isosurface resolution 5 MO 115;write IMAGE 2400 1600 JPG 100 "fes115.jpg";
+isosurface resolution 5 MO 116;write IMAGE 2400 1600 JPG 100 "fes116.jpg";
+isosurface resolution 5 MO 117;write IMAGE 2400 1600 JPG 100 "fes117.jpg";
+isosurface resolution 5 MO 118;write IMAGE 2400 1600 JPG 100 "fes118.jpg";
+isosurface resolution 5 MO 119;write IMAGE 2400 1600 JPG 100 "fes119.jpg";
+isosurface resolution 5 MO 120;write IMAGE 2400 1600 JPG 100 "fes120.jpg";
+isosurface resolution 5 MO 121;write IMAGE 2400 1600 JPG 100 "fes121.jpg";
+isosurface resolution 5 MO 122;write IMAGE 2400 1600 JPG 100 "fes122.jpg";
+isosurface resolution 5 MO 123;write IMAGE 2400 1600 JPG 100 "fes123.jpg";
+isosurface resolution 5 MO 124;write IMAGE 2400 1600 JPG 100 "fes124.jpg";
+isosurface resolution 5 MO 125;write IMAGE 2400 1600 JPG 100 "fes125.jpg";
+isosurface resolution 5 MO 126;write IMAGE 2400 1600 JPG 100 "fes126.jpg";
+isosurface resolution 5 MO 127;write IMAGE 2400 1600 JPG 100 "fes127.jpg";
+isosurface resolution 5 MO 128;write IMAGE 2400 1600 JPG 100 "fes128.jpg";
+isosurface resolution 5 MO 129;write IMAGE 2400 1600 JPG 100 "fes129.jpg";
+isosurface resolution 5 MO 130;write IMAGE 2400 1600 JPG 100 "fes130.jpg";
+isosurface resolution 5 MO 131;write IMAGE 2400 1600 JPG 100 "fes131.jpg";
+isosurface resolution 5 MO 132;write IMAGE 2400 1600 JPG 100 "fes132.jpg";
+isosurface resolution 5 MO 133;write IMAGE 2400 1600 JPG 100 "fes133.jpg";
+isosurface resolution 5 MO 134;write IMAGE 2400 1600 JPG 100 "fes134.jpg";
+isosurface resolution 5 MO 135;write IMAGE 2400 1600 JPG 100 "fes135.jpg";
+isosurface resolution 5 MO 136;write IMAGE 2400 1600 JPG 100 "fes136.jpg";
+isosurface resolution 5 MO 137;write IMAGE 2400 1600 JPG 100 "fes137.jpg";
+isosurface resolution 5 MO 138;write IMAGE 2400 1600 JPG 100 "fes138.jpg";
+isosurface resolution 5 MO 139;write IMAGE 2400 1600 JPG 100 "fes139.jpg";
+isosurface resolution 5 MO 140;write IMAGE 2400 1600 JPG 100 "fes140.jpg";
+isosurface resolution 5 MO 141;write IMAGE 2400 1600 JPG 100 "fes141.jpg";
+isosurface resolution 5 MO 142;write IMAGE 2400 1600 JPG 100 "fes142.jpg";
+isosurface resolution 5 MO 143;write IMAGE 2400 1600 JPG 100 "fes143.jpg";
+isosurface resolution 5 MO 144;write IMAGE 2400 1600 JPG 100 "fes144.jpg";
+
